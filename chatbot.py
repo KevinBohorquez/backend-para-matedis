@@ -46,7 +46,7 @@ def get_response(tag, intents_json):
             return random.choice(i['responses'])
     return "Lo siento, no entiendo esa pregunta."
 
-@app.route('/api/about', methods=['POST'])
+@app.route('/chatbot', methods=['POST'])
 def chat():
     data = request.get_json()
     message = data.get("message")
@@ -58,5 +58,5 @@ def chat():
     return jsonify({"error": "No message received"})
 
 if __name__ == '__main__':
-    port = int(os.getenv("PORT", 5000))
-    app.run(debug=True, host="0.0.0.0", port=port)  # Ajuste para localhost
+    port = int(os.getenv("PORT", 8080))
+    app.run(debug=True, host="0.0.0.0", port=port)
