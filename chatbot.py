@@ -21,12 +21,23 @@ CORS(app, resources={
         "origins": [
             "https://matedischatbot.up.railway.app",
             "https://matedisproyecto.up.railway.app",
+            "http://matedischatbot.up.railway.app",
+            "http://matedisproyecto.up.railway.app",
             "http://localhost:3000"  # Para desarrollo local
         ],
+        "supports_credentials": True,
         "methods": ["GET", "POST", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"]
     }
 })
+
+@app.after_request
+def after_request(response):
+    response.headers.add('Access-Control-Allow-Origin', 'https://matedisproyecto.up.railway.app')
+    response.headers.add('Access-Control-Allow-Headers', 'Content-Type,Authorization')
+    response.headers.add('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE,OPTIONS')
+    response.headers.add('Access-Control-Allow-Credentials', 'true')
+    return response
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
