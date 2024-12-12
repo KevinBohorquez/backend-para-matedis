@@ -50,20 +50,19 @@ def get_response(tag, intents_json):
 def index():
     return "Servidor Flask funcionando correctamente"
 
-@app.route('/chatbot', methods=['GET'])
-def chatbot_status():
-    return "Estás en el chatbot, todo funciona correctamente."
-
-@app.route('/chatbot', methods=['POST'])
+@app.route('/chatbot', methods=['GET', 'POST'])
 def chat():
-    data = request.get_json()
-    message = data.get("message")
-
-    if message:
-        tag = predict_class(message)
-        response = get_response(tag, intents)
-        return jsonify({"response": response})
-    return jsonify({"error": "No message received"})
+    if request.method == 'POST':
+        data = request.get_json()
+        message = data.get("message")
+        
+        if message:
+            tag = predict_class(message)
+            response = get_response(tag, intents)
+            return jsonify({"response": response})
+        return jsonify({"error": "No message received"})
+    
+    return "Chatbot está funcionando"
 
 if __name__ == '__main__':
     port = int(os.getenv("PORT", 8080))
