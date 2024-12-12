@@ -46,6 +46,14 @@ def get_response(tag, intents_json):
             return random.choice(i['responses'])
     return "Lo siento, no entiendo esa pregunta."
 
+@app.route('/', methods=['GET'])
+def index():
+    return "Servidor Flask funcionando correctamente"
+
+@app.route('/chatbot', methods=['GET'])
+def chatbot_status():
+    return "Estás en el chatbot, todo funciona correctamente."
+
 @app.route('/chatbot', methods=['POST'])
 def chat():
     data = request.get_json()
