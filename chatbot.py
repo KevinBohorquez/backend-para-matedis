@@ -16,7 +16,7 @@ classes = pickle.load(open('classes.pkl', 'rb'))
 model = load_model('maceta.keras')
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/*": {"origins": "https://matedisproyecto.up.railway.app"}})
 
 def clean_up_sentence(sentence):
     sentence_words = nltk.word_tokenize(sentence)
