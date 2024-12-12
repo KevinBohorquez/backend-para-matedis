@@ -10,10 +10,10 @@ from nltk.stem import WordNetLemmatizer
 import os
 
 lemmatizer = WordNetLemmatizer()
-intents = json.loads(open('backend/intents.json').read())
-words = pickle.load(open('backend/words.pkl', 'rb'))
-classes = pickle.load(open('backend/classes.pkl', 'rb'))
-model = load_model('backend/maceta.keras')
+intents = json.loads(open('intents.json').read())
+words = pickle.load(open('words.pkl', 'rb'))
+classes = pickle.load(open('classes.pkl', 'rb'))
+model = load_model('maceta.keras')
 
 app = Flask(__name__)
 CORS(app)
