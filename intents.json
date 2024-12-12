@@ -1,0 +1,59 @@
+{"intents":[
+    {
+        "tag": "saludo",
+        "patterns": ["hola","qué tal", "cómo estás", "saludos", "buenos dias", "buenas noches",
+        "hey", "hola amigo", "Hay alguien ahí"],
+        "responses": ["Hola, ¿cómo puedo ayudarte?", "Hola, ¿cómo puedo asistirte hoy?",
+        "Hola, estoy bien, ¿en qué puedo ayudarte hoy?", "¡Qué bueno verte de nuevo!", "Hola, ¿cómo puedo ayudarte?"]
+    },
+    {
+        "tag": "nombre",
+        "patterns": ["cómo es tu nombre", "como te llamas", "cual es tu nombre", "dime tu nombre",
+        "cómo te llaman", "cómo te dicen", "qué nombre tienes", "qué nombre usas"],
+        "responses": ["Mi nombre es Gepeto", "Soy Rhamses Jr."]
+    },
+    {
+        "tag": "quien eres",
+        "patterns": ["quien sos", "quien eres", "que eres", "que es lo que eres", "quien está hablando",
+        "que tipo de programa eres", "dime quien eres", "puedes decirme que eres", "explícame quien eres",
+        "como te describirías", "quien es este chatbot"],
+        "responses": ["Soy un chatbot", "Soy un duende dentro de tu computadora escribiendote jijiji"]
+    },
+    {
+        "tag": "despedida",
+        "patterns": ["Adios", "Hasta luego", "Nos vemos", "Hasta pronto", "Me tengo que ir", "Chao", "Bye"],
+        "responses": ["¡Hasta luego! Que tengas un buen día.", "Adiós, espero que volvamos a hablar pronto.",
+        "Cuídate, ¡nos vemos la próxima vez!", "Hasta pronto, ¡fue un placer hablar contigo!",
+        "Chao, ¡ten un excelente día!"]
+    },
+    {
+        "tag": "premisas",
+        "patterns": ["Quiero resolver proposiciones logicas", "Hagamos proposiciones logicas", "Quiero que resuelvas proposiciones logicas",
+        "te dare proposiciones logicas", "haz logica proposicional", "sabes logica proposicional"],
+        "responses": ["Muy bien, vamos a ver esas premisas", "Estare encantado de ayudarte con las premisas", "Veamos esas propuestas"]
+    },
+    {
+        "tag": "gracias",
+        "patterns": ["Gracias", "Muchas gracias", "Eso es útil", "Genial, gracias", "Gracias por ayudarme"],
+        "responses": ["¡Encantado de ayudar!", "¡En cualquier momento!", "¡Me alegra haber podido ayudar!",
+        "¡De nada!", "Un placer"]
+    },
+    {
+        "tag": "sinrespuesta",
+        "patterns": [],
+        "responses": ["Lo siento, no te entiendo", "Por favor, proporciona más información", "No estoy seguro de entender"]
+    },
+    {
+        "tag": "divertido",
+        "patterns": ["Cuéntame un chiste", "Dime algo divertido", "Conoces un chiste"],
+        "responses": ["Qué son 50 químicos y 50 físicos juntos? 100tifikos",
+        "Cómo se llama el compuesto químico para evitar el embarazo? Nitrato de Meterla",
+        "¿Cuál es el café más peligroso del mundo? El ex-preso",
+        "¿Por qué el libro de matemáticas está triste? Porque tiene demasiados problemas.",
+        "Un hombre se despertó en el hospital después de sufrir un accidente.\nDoctor! Doctor! No siento la cara!\nYa lo sé. Te amputé los brazos",
+        "Último momento! Accidente en la autopista: Volcó un camión que transportaba mermeladas. Hay de mora."]
+    }
+
+]
+
+}
